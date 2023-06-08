@@ -8,7 +8,6 @@ import BtmButton from "../assets/BtmButton";
 import numvid from "../Video/NUMBERS.mp4"
 import { Link,Element, Events, animateScroll as scroll, scroller } from 'react-scroll';
 const HomePage=()=>{
-
     return(
         <div >
           <div className={classes.header}>
