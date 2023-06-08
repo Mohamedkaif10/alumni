@@ -6,9 +6,13 @@ import video from "../Video/IITH.mp4"
 import Dean from"../Images/Dean.png"
 import BtmButton from "../assets/BtmButton";
 import numvid from "../Video/NUMBERS.mp4"
-import { Link} from 'react-scroll';
+import { Link,Element, Events, animateScroll as scroll, scroller } from 'react-scroll';
 const HomePage=()=>{
-        
+  const NavLinks = styled(Link)`color: blue;
+    &.active {
+    color: red;
+  }
+`;
     return(
         <div >
           <div className={classes.header}>
@@ -53,7 +57,7 @@ const HomePage=()=>{
                      <Link to="Dean" activeClass={classes.active} spy={true} smooth={true} offset={-115} duration={500}>
                            <hr className={classes.ha}></hr>
                      </Link>
-                     <Link to="video" activeClass={classes.active} spy={true} smooth={true} offset={-115} duration={500}  className={({ isActive }) =>isActive ? classes.active : undefined} end>
+                     <Link to="video" activeClassName={classes.active} spy={true} smooth={true} offset={-115} duration={500} >
                            <hr className={classes.ha}></hr>
                      </Link>
                      {/* <Link to="About" spy={true} smooth={true} offset={-115} duration={500}>

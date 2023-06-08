@@ -175,8 +175,16 @@
    position: relative;
    right: 1.25cm;
    z-index: 2;
+   cursor:pointer;
+   transition: all .3s ease-in-out;
+}
+.ha :active{
+    color: green;
+    background-color: aqua;
 }
 .active{
-    background-color: blue;
-  font-weight: bold;
+    color: blue;
 }
+.active[class="active"] {
+    border-bottom: 1px solid black;
+  }
