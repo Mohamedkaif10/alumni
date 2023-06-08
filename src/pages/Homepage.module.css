@@ -20,7 +20,6 @@
     margin-left: 15rem;
     bottom:-.5cm;
     position: relative;
-    
     right:2.1cm;
     /* background-color: red; */
   /* animation-name: example; 
@@ -73,7 +72,7 @@
     position:relative;
     left:25cm;
     bottom:11.5cm;
-   
+    animation: fadeIn 10s;
 }
 .DTDean p{
     padding-top: 20px;
@@ -87,10 +86,13 @@
     position: relative;
     bottom:60px;
     right:3.5cm;
-    animation: fadeIn 5s;
+    animation: fadeIn 10s;
+    transition: opacity 0.5s;
 }
+
 @keyframes fadeIn {
     0% { opacity: 0; }
+    50% {opacity:0.75 ;}
     100% { opacity: 1; }
   }
   
@@ -153,4 +155,28 @@
     width:20rem;
     height:5.5cm;
     padding-top: 20px;
+}
+@media screen and (max-width: 200px) {
+    .footer{  width:7cm; }
+    .footer{height:48rem;}
+}
+.lines{
+    border-style: dotted;
+    position: fixed;
+    top: 1.5cm;
+    width:3cm;
+   left:35.8cm
+}
+.ha{
+    border: 2px solid red;
+    color: red;
+    width:50px;
+   margin-left: 97%;
+   position: relative;
+   right: 1.25cm;
+   z-index: 2;
+}
+.active{
+    background-color: blue;
+  font-weight: bold;
 }

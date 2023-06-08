@@ -44,7 +44,7 @@
     border-style: dotted;
     width:40%;
     bottom:8cm;
-    left:5cm;
+    left:12cm;
     position: relative;
 }
 .saccard{
@@ -57,7 +57,8 @@ padding-top: 10px;
 height:6cm;
 position: relative;
 bottom: 7cm;
-left:8cm
+left:16cm;
+background-color: rgb(216, 191, 108);
 }
 .saccard p{
     padding-top: 10px;

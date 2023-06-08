@@ -24,13 +24,21 @@ function RootLayout() {
         <div className={classes.CU}>
           <h5>Contact Us</h5>
           <a href = "mailto: dean.ar@iith.ac.in">dean.ar@iith.ac.in</a>
-          <a href="https://www.facebook.com/iithyderabad/"><FacebookIcon fontSize="large"/></a>
-          <a href="https://twitter.com/IITHyderabad"><TwitterIcon fontSize="large"/></a>
-          <a href="https://in.linkedin.com/school/iithyderabad/"><LinkedInIcon fontSize="large"/></a>
-          <a href="https://www.instagram.com/iithyderabad/?hl=en"><InstagramIcon fontSize="large"/></a>
-          
+          <div className={classes.llinks}>
+            <a href="https://www.facebook.com/iithyderabad/"><FacebookIcon fontSize="large"/></a>
+            <a href="https://twitter.com/IITHyderabad"><TwitterIcon fontSize="large"/></a>
+            <a href="https://in.linkedin.com/school/iithyderabad/"><LinkedInIcon fontSize="large"/></a>
+            <a href="https://www.instagram.com/iithyderabad/?hl=en"><InstagramIcon fontSize="large"/></a>
+          </div>
+          </div>
+        <div className={classes.links}>
+            <h5>Quick Links</h5>
+                <ul>
+                    <li>Home</li>
+                    <li>Give</li>
+                    <li>Alumni Talk</li>
+                </ul>
         </div>
-     
       </footer>
     </>
   );
