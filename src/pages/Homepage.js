@@ -30,6 +30,12 @@ const HomePage=()=>{
                 <h1>FROM DEAN'S DESK</h1>
             <p>Hope you all are doing well. My name is Mudrika Khandelwal and I recently assumed the office as Dean of Alumni Relations. Having reaped numerous benefits of being an IIT Bombay Alumna, I have a fair idea of how important the connection with one’s Alma mater is and through this role, I wish to facilitate the same for all of you.</p>
             </div>
+            <div className={classes.deanintro}>
+             <h4>Prof.Mudrika Khandelwal</h4>
+             <p>Ph.D University of Cambridge</p>
+             <p>Dean, Alumni Relations</p>
+             <p>MSME Prefessor</p>
+            </div>
           </div>
           <div className={classes.events}>
               <h1>Latest Events : </h1>
@@ -37,36 +43,7 @@ const HomePage=()=>{
           <div className={classes.footer}>
             <p>fas</p>
           </div>
-          <div className={classes.linewrap}>
-        <a href="#1" className={classes.sectionLine}>
-            <span className={classes.name}>Welcome</span>
-            <span className={classes.line}></span>
-        </a>
-        <a href="#2"className={classes.sectionLine}>
-            <span className={classes.name}>Dean's Desk</span>
-            <span className={classes.line}></span>
-        </a>
-        <a href="#3" className={classes.sectionLine}>
-            <span className={classes.name}>IIT-B In Numbers</span>
-            <span className={classes.line}></span>
-        </a>
-        <a href="#4" className={classes.sectionLine}>
-            <span className={classes.name}>What's New</span>
-            <span className={classes.line}></span>
-        </a>
-        <a href="#5" className={classes.sectionLine}>
-            <span className={classes.name}>Upcoming Events</span>
-            <span className={classes.line}></span>
-        </a>
-        <a href="#6" className={classes.sectionLine}>
-            <span className={classes.name}>Alums In News</span>
-            <span className="line"></span>
-        </a>
-        <a href="#7" className={classes.sectionLine}>
-            <span className={classes.name}>Campaigns</span>
-            <span className={classes.line}></span>
-        </a>
-    </div>
+          
           {/* <div className={classes.icon}>
           
           <a href="https://www.facebook.com/iithyderabad/"><FacebookIcon fontSize="large"/></a>

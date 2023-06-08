@@ -5,6 +5,7 @@ import classes from './Navbar.module.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Navbar, NavDropdown, Form, FormControl, Button, Nav } from 'react-bootstrap'
 import Logohyd from "../Images/IITHY.jpeg"
+import HYDlogo from '../Images/logohyderabad.png'
 function MainNavigation() {
   return (
     // <header className={classes.header}>
@@ -41,9 +42,9 @@ function MainNavigation() {
     <span></span>
   
     
-    <a href="#" className={classes.menulogo}>
-      <img src={Logohyd} alt="My Awesome Website"/>
-    </a>
+    <div className={classes.menulogo}>
+      <img src={HYDlogo} alt="My Awesome Website"/>
+    </div>
   
    
     <div className={classes.menu}>
@@ -51,14 +52,14 @@ function MainNavigation() {
       </ul>
       <ul>
         <li>
-          <a href="#home">
+          <Link to="/">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="#contact">
+          <Link to="/about">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </div>

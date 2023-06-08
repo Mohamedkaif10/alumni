@@ -1,7 +1,12 @@
 .header{
     border-style: dotted;
     position: relative;
-    height:30rem;
+    
+    bottom:38px
+}
+@media screen and (max-width: 200px) {
+    .header{  width:7cm; }
+    .header{height:48rem;}
 }
 .sliderimg{
     width: 100%;
@@ -12,20 +17,19 @@
     border-style: dotted;
     text-align: left;
     padding-left: 2rem;
-    width:30cm;
     margin-left: 15rem;
-    top:20px;
+    bottom:-.5cm;
     position: relative;
-    height:15cm;
-    right:1cm;
-    background-color: red;
-  animation-name: example; 
-  animation-duration: 4s;   
+    
+    right:2.1cm;
+    /* background-color: red; */
+  /* animation-name: example; 
+  animation-duration: 4s;    */
 }
-@keyframes example {
+/* @keyframes example {
     from {background-color: red;}
     to {background-color: yellow;}
-  }
+  } */
   .About :hover{
     animation-name: exampl; 
   }
@@ -42,6 +46,11 @@
     font-size: 20px;
     padding-top: 1.5rem;
 }
+@media screen and (max-width: 200px) {
+    .About { width:50cm; }
+    .About{margin-left: 216px;}
+    .About{height:15cm;}
+}
 /* .About :hover{
     z-index: 100;
     transition: all 200ms ease-in;
@@ -53,25 +62,31 @@
     align-items: right; */
     position: relative;
     top:30px;
-    height:15cm
+    height:15cm;
+    padding-left: 20px;
+   
 }
 .DTDean{
     border-style: dashed;
     width:30%;
     padding-top: 20px;
     position:relative;
-    left:23cm;
-    bottom:10cm;
-    height:10cm;
-    animation: mymove 5s infinite;
+    left:25cm;
+    bottom:11.5cm;
+   
 }
 .DTDean p{
     padding-top: 20px;
 }
+@media screen and (max-width: 200px){
+    .DTDean {width: 200px; }
+    .DTDean{position: relative;right:10cm}
+
+}
 .Dean img{
     position: relative;
-    bottom:10px;
-    right:9cm;
+    bottom:60px;
+    right:3.5cm;
     animation: fadeIn 5s;
 }
 @keyframes fadeIn {
@@ -112,95 +127,30 @@
     color:black;
 }
 .video{
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    right: 0;
+    position: relative;
+    z-index: 2;
+    right:0cm;
     bottom: 0;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    height:16cm;
+    
    
 }
 .video video{
     position: relative;
-    padding-top: 2rem;
+    padding-top: 2px;
 }
-.section-line-wrap .section-line {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 9px 0 9px 0;
-    margin-left: auto;
-    cursor: pointer;
+@media screen and (max-width: 200px) {
+    .video {  width:7cm; }
+    .video{height:20cm;}
+}
+.deanintro{
+    border-style: dotted;
     position: relative;
-}
-
-.sectionLine{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 9px 0 9px 0;
-    margin-left: auto;
-    cursor: pointer;
-    position: relative;
-    color:black
-}
-/* .sectionLine a {
-    color: aqua;
-    transition: all .3s ease;
-}
-.sectionLine a {
-    transition: all .2s ease-in-out;
-    -webkit-transition: all .2s ease-in-out;
-    text-decoration: none;
-} */
-.line:active{
-    width: 40px;
-    opacity: 1;
-    background: red;
-}
-.name {
-    position: absolute;
-    right: 50px;
-    font-size: 14px;
-    line-height: 1;
-    font-weight: 400;
-    opacity: 0;
-    visibility: hidden;
-    z-index: -1;
-    color: green;
-    white-space: nowrap;
-    margin-right: 0;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-}
-.line {
-    width: 25px;
-    height: 3px;
-    border-radius: 4px;
-    background-color: aqua;
-    transition: all .3s ease-in-out;
-    -webkit-transition: all .3s ease-in-out;
-    display: inline-block;
-    color: aqua;
-}
-
-.linewrap a{
-    background-color: black;
-    width:3%;
-    color: aqua;
-   
-    
-}
-.linewrap a:active{
-    background-color: black;
-    color: red;
-    width:30px
-}
-.section-line-wrap .section-line:hover .line {
-    width: 40px;
-    background: var(--dblue);
+    bottom:15cm;
+    width:20rem;
+    height:5.5cm;
+    padding-top: 20px;
 }

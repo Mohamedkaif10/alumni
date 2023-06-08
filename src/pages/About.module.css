@@ -1,0 +1,71 @@
+.heading{
+    border-style: dashed;
+    width:30%;
+   position: relative;
+   text-align: center;
+   padding-top: 12px;
+   left:13.5cm;
+   top:12cm
+}
+.heading p{
+    font-size: 30px;
+    font-weight: bolder;
+}
+.container {
+    padding: 2px 16px;
+  }
+.c1{
+    position: relative;
+    left:15cm;
+    top:15cm
+}
+.c2{
+    position: relative;
+    left:26cm;
+    top: 8cm;
+}
+.c3{
+    position: relative;
+    left:4cm;
+    bottom: 4cm;
+}
+.c4{
+    position: relative;
+    left:9cm;
+    bottom:1rem;
+    
+}
+.c5{
+    position: relative;
+    left:22cm;
+    bottom: 12cm;
+}
+.sac{
+    border-style: dotted;
+    width:40%;
+    bottom:8cm;
+    left:5cm;
+    position: relative;
+}
+.saccard{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 22%;
+border-radius: 5px;
+border-style: none;
+padding-top: 10px;
+height:6cm;
+position: relative;
+bottom: 7cm;
+left:8cm
+}
+.saccard p{
+    padding-top: 10px;
+}
+.saccard:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  .pic img{
+    height:15cm;
+    width:40cm
+  }

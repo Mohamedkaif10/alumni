@@ -42,8 +42,8 @@
   }
   
   .menulogo img {
-    max-height: 40px;
-    max-width: 100px;
+    height: 40px;
+    width: 100px;
     flex-shrink: 0;
   }
   
@@ -117,7 +117,6 @@
     font-size: 22px;
   }
   
-  /* mobile styles */
   @media only screen and (max-width: 767px) { 
     .menucontainer {
       flex-direction: column;
@@ -130,11 +129,9 @@
       top: 50%;
       transform: translateY(-50%);
     }
-  
-    .menulogo img {
-      max-height: 30px;
-    }
-  
+   .menulogo img{
+    max-height: 70px;
+   }
     .menu {
       position: absolute;
       box-sizing: border-box;
