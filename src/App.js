@@ -1,24 +1,7 @@
-import {createBrowserRouter,RouterProvider} from 'react-router-dom';
-
-import HomePage from './pages/Homepage';
-// import ProductsPage from './pages/Products';
-import RootLayout from './pages/Root.js';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <RootLayout />,
-    children: [
-      { index:true, element: <HomePage /> }
-      
-    ],
-  }
-]);
-
-// const router = createBrowserRouter(routeDefinitions);
+import TodoList from "./pages/Homepage"
 
 function App() {
-  return <RouterProvider router={router} />;
+  return <TodoList  />;
 }
 
 export default App;
