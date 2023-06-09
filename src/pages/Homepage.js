@@ -1,31 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import Button from '../Assets/Button';
-import Card from '../Assets/Card';
 import classes from "./Homepage.module.css"
+import React, { useState, Fragment } from 'react';
+import Card from '../Assets/Card';
+import Button from "../Assets/Button"
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
-
-  useEffect(() => {
-    const storedTasks = localStorage.getItem('tasks');
-    if (storedTasks) {
-      setTasks(JSON.parse(storedTasks));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-  }, [tasks]);
-
   const addTask = () => {
     if (newTask.trim() !== '') {
       const newTaskObj = {
         id: new Date().getTime(),
         title: newTask,
         description: newTaskDescription,
-        completed: false,
       };
       setTasks([...tasks, newTaskObj]);
       setNewTask('');
@@ -38,19 +25,6 @@ const TodoList = () => {
     setTasks(updatedTasks);
   };
 
-  const toggleComplete = (taskId) => {
-    const updatedTasks = tasks.map((task) => {
-      if (task.id === taskId) {
-        return {
-          ...task,
-          completed: !task.completed,
-        };
-      }
-      return task;
-    });
-    setTasks(updatedTasks);
-  };
-
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
   };
@@ -60,6 +34,7 @@ const TodoList = () => {
   );
 
   return (
+    <Fragment>
     <Card className={classes.input}>
       <h1>To-Do List</h1>
       <input
@@ -68,23 +43,7 @@ const TodoList = () => {
         value={searchTerm}
         onChange={handleSearch}
       />
-      <ul>
-        {filteredTasks.map((task) => (
-          <li key={task.id}>
-            <input
-              type="checkbox"
-              checked={task.completed}
-              onChange={() => toggleComplete(task.id)}
-            />
-            <span className={task.completed ? 'completed' : ''}>
-              {task.title}
-            </span>
-            <Button onClick={() => deleteTask(task.id)}>Delete</Button>
-            <Button>Edit</Button>
-            <p>{task.description}</p>
-          </li>
-        ))}
-      </ul>
+      
       <h2>Add New Task</h2>
       <input
         type="text"
@@ -99,6 +58,25 @@ const TodoList = () => {
       ></textarea>
       <Button onClick={addTask}>Add Task</Button>
     </Card>
+    <Card className={classes.task}>
+    <ul>
+        {filteredTasks.map((task) => (
+          <li key={task.id}>
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onClick={() => deleteTask(task.id)}
+            />
+            <span className={task.completed ? 'completed' : ''}>
+              {task.title}
+            </span>
+            <Button onClick={() => deleteTask(task.id)}>Delete</Button>
+            <p>{task.description}</p>
+          </li>
+        ))}
+      </ul>
+      </Card>
+    </Fragment>
   );
 };
 
