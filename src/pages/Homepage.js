@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-
+import Button from '../Assets/Button';
+import Card from '../Assets/Card';
+import classes from "./Homepage.module.css"
 const TodoList = () => {
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
@@ -58,7 +60,7 @@ const TodoList = () => {
   );
 
   return (
-    <div>
+    <Card className={classes.input}>
       <h1>To-Do List</h1>
       <input
         type="text"
@@ -77,8 +79,8 @@ const TodoList = () => {
             <span className={task.completed ? 'completed' : ''}>
               {task.title}
             </span>
-            <button onClick={() => deleteTask(task.id)}>Delete</button>
-            <button>Edit</button>
+            <Button onClick={() => deleteTask(task.id)}>Delete</Button>
+            <Button>Edit</Button>
             <p>{task.description}</p>
           </li>
         ))}
@@ -95,8 +97,8 @@ const TodoList = () => {
         value={newTaskDescription}
         onChange={(event) => setNewTaskDescription(event.target.value)}
       ></textarea>
-      <button onClick={addTask}>Add Task</button>
-    </div>
+      <Button onClick={addTask}>Add Task</Button>
+    </Card>
   );
 };
 
