@@ -1,12 +1,24 @@
 import classes from "./Homepage.module.css"
-import React, { useState, Fragment } from 'react';
+import React, { useState, Fragment,useEffect } from 'react';
 import Card from '../Assets/Card';
 import Button from "../Assets/Button"
 const TodoList = () => {
+  
+
   const [tasks, setTasks] = useState([]);
   const [newTask, setNewTask] = useState('');
   const [newTaskDescription, setNewTaskDescription] = useState('');
   const [searchTerm, setSearchTerm] = useState('');
+  useEffect(() => {
+    const storedTasks = localStorage.getItem('tasks');
+    if (storedTasks) {
+      setTasks(JSON.parse(storedTasks));
+    }
+    }, []);
+
+  useEffect(() => {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  }, [tasks]);
   const addTask = () => {
     if (newTask.trim() !== '') {
       const newTaskObj = {
