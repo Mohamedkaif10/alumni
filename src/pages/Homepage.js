@@ -1,14 +1,34 @@
 import classes from "./Homepage.module.css"
 import { Fragment } from "react"
-import SimpleImageSlider from "react-simple-image-slider";
 import Button from"../assets/Button"
 import video from "../Video/IITH.mp4"
 import Dean from"../Images/Dean.png"
 import BtmButton from "../assets/BtmButton";
 import numvid from "../Video/NUMBERS.mp4"
 import { Link,Element, Events, animateScroll as scroll, scroller } from 'react-scroll';
+import React, { useState } from 'react';
 const HomePage=()=>{
-    return(
+      const [isActive, setIsActive] = useState(false);
+      const [isActive2, setIsActive2] = useState(false);
+      const [isActive3, setIsActive3] = useState(false);
+      const [isVisible, setIsVisible] = useState(false);
+     
+      const handleClick = () => {
+            setIsActive(true);
+           setIsActive2(false);
+             setIsActive3(false);
+          };
+          const handleClick2 = () => {
+            setIsActive(false);
+          setIsActive2(true);
+    setIsActive3(false);
+          };
+          const handleClick3 = () => {
+            setIsActive(false);
+            setIsActive2(false);
+            setIsActive3(true);
+          };
+          return(
         <div >
           <div className={classes.header}>
            <a className={classes.video} href="https://youtu.be/xUNPjKaqDPA">
@@ -46,22 +66,18 @@ const HomePage=()=>{
                 </video>
           </div>
         <div className={classes.lines}>
-                    <Link to="About" activeClass={classes.active} spy={true} smooth={true} offset={-115} duration={500}>
-                          <hr className={classes.ha}></hr>
+                    <Link to="About"   spy={true} smooth={true} offset={-115} duration={500}>
+                          <button className={`${classes.ha} ${isActive ? classes.active : ''}`} onClick={handleClick} ></button>
                      </Link>
-                     <Link to="Dean" activeClass={classes.active} spy={true} smooth={true} offset={-115} duration={500}>
-                           <hr className={classes.ha}></hr>
+                     {isActive && <p>About us</p>}
+                     <Link to="Dean"  spy={true} smooth={true} offset={-115} duration={500}>
+                           <button className={`${classes.ha} ${isActive2 ? classes.active2 : ''}`} onClick={handleClick2}></button>
                      </Link>
-                     <Link to="video" activeClassName={classes.active} spy={true} smooth={true} offset={-115} duration={500} >
-                           <hr className={classes.ha}></hr>
+                     {isActive2 && <p>Dean's Desk</p>}
+                     <Link to="video"  spy={true} smooth={true} offset={-115} duration={500} >
+                           <button className={`${classes.ha} ${isActive3 ? classes.active3 : ''}`} end onClick={handleClick3}></button>
                      </Link>
-                     {/* <Link to="About" spy={true} smooth={true} offset={-115} duration={500}>
-        <hr className={classes.ha}></hr>
-                     </Link>
-               <hr className={classes.ha}></hr>
-               <hr className={classes.ha}></hr>
-               <hr className={classes.ha}></hr>
-               <hr className={classes.ha}></hr> */}
+                     {isActive3 && <p>IITH in Numbers</p>}
         </div>
         </div>
     )

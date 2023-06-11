@@ -1,7 +1,6 @@
 .header{
     border-style: dotted;
     position: relative;
-    
     bottom:38px
 }
 @media screen and (max-width: 200px) {
@@ -20,7 +19,7 @@
     margin-left: 15rem;
     bottom:-.5cm;
     position: relative;
-    right:2.1cm;
+    right:3.1cm;
     /* background-color: red; */
   /* animation-name: example; 
   animation-duration: 4s;    */
@@ -50,11 +49,10 @@
     .About{margin-left: 216px;}
     .About{height:15cm;}
 }
-/* .About :hover{
-    z-index: 100;
-    transition: all 200ms ease-in;
-    transform: scale(1.5);
-} */
+.About :hover{
+    transition: all 200ms ease-in-out;
+    transform: scale(1.25);
+}
 .Dean{
     border-style: dotted;
     /* display: flex; 
@@ -86,15 +84,17 @@
     position: relative;
     bottom:60px;
     right:3.5cm;
-    animation: fadeIn 10s;
-    transition: opacity 0.5s;
+    animation: fadeIn 1s ease-in forwards;
 }
 
 @keyframes fadeIn {
-    0% { opacity: 0; }
-    50% {opacity:0.75 ;}
-    100% { opacity: 1; }
-  }
+    from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   
 
 .events{
@@ -165,26 +165,33 @@
     position: fixed;
     top: 1.5cm;
     width:3cm;
-   left:35.8cm
+    transition: background-color 0.3s ease;
+   left:35.8cm;
 }
 .ha{
     border: 2px solid red;
     color: red;
-    width:50px;
+    /* width:50px; */
    margin-left: 97%;
    position: relative;
-   right: 1.25cm;
+   right: 1cm;
    z-index: 2;
    cursor:pointer;
-   transition: all .3s ease-in-out;
+   transition-delay: all .5s ease-in;
 }
-.ha :active{
-    color: green;
-    background-color: aqua;
-}
-.active{
-    color: blue;
-}
-.active[class="active"] {
-    border-bottom: 1px solid black;
+.ha.active{
+    /* Styles for the active button */
+    background-color: #8b1323;
+    color: #43138b;
+    width:4cm;
   }
+.ha.active2{
+    background-color: aqua;
+    color: #0c7876;
+    width:4cm;
+}
+.ha.active3{
+    background-color: rgb(163, 16, 193);
+    color: #78440c;
+    width:4cm;
+}

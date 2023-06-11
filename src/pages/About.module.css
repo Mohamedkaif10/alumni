@@ -5,7 +5,7 @@
    text-align: center;
    padding-top: 12px;
    left:13.5cm;
-   top:12cm
+   top:4cm
 }
 .heading p{
     font-size: 30px;
@@ -17,33 +17,33 @@
 .c1{
     position: relative;
     left:15cm;
-    top:15cm
+    top:8cm
 }
 .c2{
     position: relative;
     left:26cm;
-    top: 8cm;
+    top: 5cm;
 }
 .c3{
     position: relative;
     left:4cm;
-    bottom: 4cm;
+    bottom: 7cm;
 }
 .c4{
     position: relative;
     left:9cm;
-    bottom:1rem;
+    bottom:8rem;
     
 }
 .c5{
     position: relative;
     left:22cm;
-    bottom: 12cm;
+    bottom: 15cm;
 }
 .sac{
     border-style: dotted;
     width:40%;
-    bottom:8cm;
+    bottom:11cm;
     left:12cm;
     position: relative;
 }
@@ -56,7 +56,7 @@ border-style: none;
 padding-top: 10px;
 height:6cm;
 position: relative;
-bottom: 7cm;
+bottom: 9cm;
 left:16cm;
 background-color: rgb(216, 191, 108);
 }
