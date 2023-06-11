@@ -7,11 +7,24 @@
     .header{  width:7cm; }
     .header{height:48rem;}
 }
-.sliderimg{
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
-    }
+.video{
+    position: relative;
+    z-index: 2;
+    right:0cm;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width: 200px) {
+    .video {  width:7cm; }
+    .video{height:20cm;}
+}
+.video video{
+    position: relative;
+    padding-top: 2px;
+}
 .About{
     border-style: dotted;
     text-align: left;
@@ -20,20 +33,10 @@
     bottom:-.5cm;
     position: relative;
     right:3.1cm;
-    /* background-color: red; */
-  /* animation-name: example; 
-  animation-duration: 4s;    */
+    background-color: blue;
 }
-/* @keyframes example {
-    from {background-color: red;}
-    to {background-color: yellow;}
-  } */
-  .About :hover{
-    animation-name: exampl; 
-  }
-  @keyframes example {
-    from {background-color: pink;}
-    to {background-color: blue;}
+.About :hover{
+    background-color: red;
   }
 
 .About h1{
@@ -51,42 +54,52 @@
 }
 .About :hover{
     transition: all 200ms ease-in-out;
-    transform: scale(1.25);
+    transform: scale(1.05);
 }
 .Dean{
     border-style: dotted;
-    /* display: flex; 
-    align-items: right; */
     position: relative;
     top:30px;
     height:15cm;
     padding-left: 20px;
    
 }
+.Dean img{
+    position:absolute;
+    bottom:100px;
+    right:14.5cm;
+    animation: fadeIn 3s;
+}
 .DTDean{
     border-style: dashed;
     width:30%;
     padding-top: 20px;
-    position:relative;
-    left:25cm;
-    bottom:11.5cm;
-    animation: fadeIn 10s;
+    animation: fadeIn 3s;
+    border: 1px solid black;
+  padding: 10px;
+  position: absolute;
+  bottom: 150px;
+  right:100px
 }
+
 .DTDean p{
     padding-top: 20px;
 }
-@media screen and (max-width: 200px){
-    .DTDean {width: 200px; }
-    .DTDean{position: relative;right:10cm}
-
+@media (max-width: 768px) {
+    .DTDean {
+      left: 5cm;
+    }
+  }
+.deanintro{
+    border-style: dotted;
+    width:20rem;
+    height:5.5cm;
+    padding-top: 20px;
+    animation: fadeIn 3s;
+    position: absolute;
+    bottom:0px;
+    left:50px
 }
-.Dean img{
-    position: relative;
-    bottom:60px;
-    right:3.5cm;
-    animation: fadeIn 1s ease-in forwards;
-}
-
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -95,66 +108,12 @@
         opacity: 1;
       }
     }
-  
-
-.events{
-    border-style: dotted;
-    height:15cm;
-    width:25cm;
-    margin-left: 15rem;
-    position: relative;
-   top:30px;
-   text-align: left;
-   padding-left: 2rem;
-   animation: mymove 5s infinite;
-   animation-timing-function: ease-in;
-}
 .footer{
     border-style: dotted;
     position: relative;
     top:50px;
     height:10cm;
     background-color: #434343;
-}
-.icon{
-   border-style: dashed;
-   position: relative;
-   top:70px;
-   display: flex;
-   gap: 3rem;
-   padding-left: 15cm;
-}
-.icon a{
-    text-decoration: none;
-    color:black;
-}
-.video{
-    position: relative;
-    z-index: 2;
-    right:0cm;
-    bottom: 0;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-   
-}
-.video video{
-    position: relative;
-    padding-top: 2px;
-}
-@media screen and (max-width: 200px) {
-    .video {  width:7cm; }
-    .video{height:20cm;}
-}
-.deanintro{
-    border-style: dotted;
-    position: relative;
-    bottom:15cm;
-    width:20rem;
-    height:5.5cm;
-    padding-top: 20px;
 }
 @media screen and (max-width: 200px) {
     .footer{  width:7cm; }
@@ -171,7 +130,6 @@
 .ha{
     border: 2px solid red;
     color: red;
-    /* width:50px; */
    margin-left: 97%;
    position: relative;
    right: 1cm;
@@ -180,7 +138,6 @@
    transition-delay: all .5s ease-in;
 }
 .ha.active{
-    /* Styles for the active button */
     background-color: #8b1323;
     color: #43138b;
     width:4cm;

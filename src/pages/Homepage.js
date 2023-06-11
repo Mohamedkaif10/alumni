@@ -11,8 +11,6 @@ const HomePage=()=>{
       const [isActive, setIsActive] = useState(false);
       const [isActive2, setIsActive2] = useState(false);
       const [isActive3, setIsActive3] = useState(false);
-      const [isVisible, setIsVisible] = useState(false);
-     
       const handleClick = () => {
             setIsActive(true);
            setIsActive2(false);
@@ -57,9 +55,6 @@ const HomePage=()=>{
              <p>MSME Prefessor</p>
             </div>
           </div>
-          {/* <div className={classes.events}>
-              <h1>Latest Events : </h1>
-          </div> */}
           <div className={classes.footer} name="video">
           <video loop src={numvid} className="" autoplay=""  title="NUMBERS IN IIT Hyderabad" playsinline="true" webkit-playsinline="true" preload="auto" muted="muted" controlslist="nodownload, noremoteplayback" autopictureinpicture="false" buffered="" x-webkit-airplay="deny" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope;" width="100%" height="100%" poster="https://alumni.acr.iitb.ac.in/wp-content/themes/iitbombay-theme/assets/img/hero.webp" type="video/mp4">
                       Sorry, your browser doesn't support embedded videos
